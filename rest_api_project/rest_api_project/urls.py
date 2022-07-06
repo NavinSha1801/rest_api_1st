@@ -1,4 +1,4 @@
-"""new_api URL Configuration
+"""rest_api_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('api-auth',include('rest_framework.urls')),
+    path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    path('',include('app_api.urls')),
+    path('',include('core_app.urls'))
 ]
